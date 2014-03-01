@@ -10,10 +10,12 @@ app.use express.errorHandler()
 app.set 'views', __dirname + '/views'
 app.set 'view engine', 'jade'
 
+app.use '/components', express.static __dirname + '/components'
+
 app.get '/', (req,res) ->
 	res.render 'main'
 
 app.post '/refresh', ->
 	process.exit 200
 
-app.listen 80
+app.listen 8080
