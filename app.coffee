@@ -23,10 +23,25 @@ app.get '/', (req,res) ->
 app.post '/refresh', ->
 	process.exit 200
 
+o = require 'observable'
+users = o 0
+
 io.sockets.on 'connection', (socket) ->
+	byes = []
+	bye = ->
+		byes.map (f) -> f()
+
+	users users() + 1
 	socket.emit 'news', hello : 'world'
+
+	byes.push users (u) ->
+		socket.emit 'news', num_users : u
+
 	socket.on 'cevent', (data) ->
 		console.log data
+	socket.once 'disconnect', ->
+		bye()
+		users users() - 1
 
 port = process.argv[2] or 80
 server.listen port
