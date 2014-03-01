@@ -1,0 +1,19 @@
+{
+  "name": "aws-drone",
+  "version": "0.0.0",
+  "homepage": "https://github.com/nakosung/hello-aws",
+  "authors": [
+    "Nako Sung <deif79@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.13"
+  }
+}

@@ -9,4 +9,5 @@ do
 	echo refresh
     git pull
     npm i
+    bower i
 done
