@@ -1,6 +1,10 @@
 doctype html
-head
-	title hello this is tokyo AWS
-	script(src='/components/angular/angular.min.js')
-body
-	h3 AWS
+html(ng-app="test")
+	head
+		title hello this is tokyo AWS
+		script(src='/components/angular/angular.min.js')
+		script(src='/main.js')
+	body
+		h3 AWS
+		p(ng-controller='MainCtrl')
+			{{value}}
