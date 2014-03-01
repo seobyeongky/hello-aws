@@ -1,6 +1,8 @@
 echo hello loop
 while true
 do
+    npm i
+    bower i
 	coffee app.coffee
 	if [ $? -eq 0 ]
 	then
@@ -8,6 +10,4 @@ do
 	fi
 	echo refresh
     git pull
-    npm i
-    bower i
 done
