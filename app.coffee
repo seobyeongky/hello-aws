@@ -4,13 +4,13 @@ app = express()
 pub = __dirname + '/public'
 
 app.use app.router
+app.use '/components', express.static __dirname + '/bower_components'
 app.use express.static pub
 app.use express.errorHandler()
 
 app.set 'views', __dirname + '/views'
 app.set 'view engine', 'jade'
 
-app.use '/components', express.static __dirname + '/components'
 
 app.get '/', (req,res) ->
 	res.render 'main'
@@ -18,4 +18,5 @@ app.get '/', (req,res) ->
 app.post '/refresh', ->
 	process.exit 200
 
-app.listen 8080
+port = process.argv[2] or 80
+app.listen port
