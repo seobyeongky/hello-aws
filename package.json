@@ -1,0 +1,20 @@
+{
+  "name": "aws-drone",
+  "version": "0.0.0",
+  "description": "ERROR: No README.md file found!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nakosung/hello-aws.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "1db5339f5ee893d22020e277b4d8afc720f87302",
+  "dependencies": {
+    "express": "~3.4.8"
+  }
+}
