@@ -6,9 +6,22 @@ html(ng-app="test")
 		script(src='/components/angular-socket-io/socket.js')
 		script(src='/lib/main.js')
 		script(src='/socket.io/socket.io.js')
-		link(rel='stylesheet',href='/bootstrap/dist/css/bootstrap.min.css')
+		link(rel='stylesheet',href='/components/bootstrap/dist/css/bootstrap.min.css')
 	body
-		h3 AWS
-		p(ng-controller='MainCtrl')
-			{{value}}
-			button.btn.btn-default test
+		.container
+			nav.navbar.navbar-default
+				.container-fluid
+					.navbar-header
+						a.navbar-brand AWS EC2
+					ul.nav.navbar-nav
+						li
+							a(href='#') Test
+					.pull-right
+						a.navbar-brand powered by node+angular
+
+			.row
+				.col-md-6
+					p(ng-controller='MainCtrl')
+						{{value}}
+						button.btn.btn-default test
+				
