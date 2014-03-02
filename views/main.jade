@@ -2,11 +2,13 @@ doctype html
 html(ng-app="test")
 	head
 		title hello this is tokyo AWS
-		script(src='/components/angular/angular.js')
+		script(src='/components/angular/angular.min.js')
 		script(src='/components/angular-socket-io/socket.js')
 		script(src='/lib/main.js')
 		script(src='/socket.io/socket.io.js')
+		link(rel='stylesheet',href='/bootstrap/dist/css/bootstrap.min.css')
 	body
 		h3 AWS
 		p(ng-controller='MainCtrl')
 			{{value}}
+			button.btn.btn-default test
