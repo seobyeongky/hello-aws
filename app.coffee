@@ -26,6 +26,11 @@ app.post '/refresh', ->
 o = require 'observable'
 users = o 0
 
+redis = require 'node-redis'
+client = undefined
+if process.env.REDIS_PORT_6379_TCP_PORT? and process.env.REDIS_PORT_6379_TCP_ADDR?
+	client = redis.createClient process.env.REDIS_PORT_6379_TCP_PORT, process.env.REDIS_PORT_6379_TCP_ADDR
+
 io.sockets.on 'connection', (socket) ->
 	byes = []
 	bye = ->
@@ -35,7 +40,9 @@ io.sockets.on 'connection', (socket) ->
 	socket.emit 'news', hello : 'world'
 
 	byes.push users (u) ->
-		socket.emit 'news', num_users : u
+		socket.emit 'news', 
+			num_users : u
+			redis_init : client?
 
 	socket.on 'cevent', (data) ->
 		console.log data
