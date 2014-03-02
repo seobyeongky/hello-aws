@@ -3,15 +3,13 @@
   angular.module('test', ['btford.socket-io']).factory('mySocket', function(socketFactory) {
     return socketFactory();
   }).controller('MainCtrl', function($scope, mySocket) {
-    $scope.value = 'main';
+    $scope.value = {};
     $scope.text = '{}';
     mySocket.on('news', function(data) {
       return $scope.value = data;
     });
     mySocket.on('text', function(data) {
-      return $scope.$apply(function() {
-        return $scope.text = data;
-      });
+      return $scope.text = data;
     });
     return $scope.update = function(text) {
       return mySocket.emit('text', text);
