@@ -44,3 +44,4 @@ io.sockets.on 'connection', (socket) ->
 		users users() - 1
 
 port = process.argv[2] or 80
+server.listen port
