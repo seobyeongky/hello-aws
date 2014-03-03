@@ -21,6 +21,7 @@ app.get '/', (req,res) ->
 	res.render 'main'
 
 app.post '/refresh', ->
+	res.send 200
 	process.exit 200
 
 o = require 'observable'
