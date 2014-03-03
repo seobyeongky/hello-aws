@@ -20,7 +20,7 @@ app.set 'view engine', 'jade'
 app.get '/', (req,res) ->
 	res.render 'main'
 
-app.post '/refresh', ->
+app.post '/refresh', (req,res) ->
 	res.send 200
 	process.exit 200
 
