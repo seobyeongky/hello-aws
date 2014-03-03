@@ -19,6 +19,8 @@
     "jade": "~1.2.0",
     "socket.io": "~0.9.16",
     "observable": "~2.1.3",
-    "node-redis": "~0.1.7"
+    "node-redis": "~0.1.7",
+    "socket.io-stream": "~0.5.3",
+    "socket.io-client": "~0.9.16"
   }
 }

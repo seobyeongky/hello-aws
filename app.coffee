@@ -1,6 +1,4 @@
 {exec} = require 'child_process'
-exec "coffee -c -o public/lib/ src/", (err) ->
-	console.log 'coffee ready', err
 	
 express = (require 'express')
 app = express()
