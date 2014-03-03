@@ -2,10 +2,12 @@ doctype html
 html(ng-app="test")
 	head
 		title hello this is tokyo AWS
+		script(src='/components/jquery/dist/jquery.min.js')
 		script(src='/components/angular/angular.min.js')
 		script(src='/components/angular-socket-io/socket.js')
-		script(src='/lib/main.js')
 		script(src='/socket.io/socket.io.js')
+		script(src='/lib/main.js')
+		script(src='/components/bootstrap/js/collapse.js')
 		link(rel='stylesheet',href='/components/bootstrap/dist/css/bootstrap.min.css')
 		meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
 	body
@@ -13,10 +15,18 @@ html(ng-app="test")
 			nav.navbar.navbar-default
 				.container-fluid
 					.navbar-header
+						button.navbar-toggle(type='button',data-toggle='collapse',data-target='#navbar-collapse-1')
+							span.sr-only Toggle navigation
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar						
 						a.navbar-brand AWS EC2
-					ul.nav.navbar-nav
-						li
-							a(href='#') Test					
+					.collapse.navbar-collapse#navbar-collapse-1
+						ul.nav.navbar-nav
+							li
+								a(href='#') Hello					
+							li
+								a(href='#') Amazon
 
 			.row
 				.col-md-6.col-xs-12
