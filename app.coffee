@@ -1,5 +1,6 @@
 {exec} = require 'child_process'
 	
+zko = (require 'zk-observable')()
 express = (require 'express')
 app = express()
 server = (require 'http').createServer app
