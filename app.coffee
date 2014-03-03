@@ -5,7 +5,7 @@ exec "coffee -c -o public/lib/ src/", (err) ->
 express = (require 'express')
 app = express()
 server = (require 'http').createServer app
-io = (require 'socket.io').listen server
+io = (require 'socket.io').listen server, log:false
 
 pub = __dirname + '/public'
 
