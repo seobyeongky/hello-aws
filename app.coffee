@@ -61,4 +61,4 @@ io.sockets.on 'connection', (socket) ->
 port = process.argv[2] or 80
 server.listen port
 
-console.log 'server is running!5'
+console.log 'server is running!6'
