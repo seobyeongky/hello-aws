@@ -10,6 +10,7 @@ html(ng-app="test")
 		script(src='/components/bootstrap/js/collapse.js')
 		script(src="/components/hide-address-bar/hide-address-bar.js")
 		link(rel='stylesheet',href='/components/bootstrap/dist/css/bootstrap.min.css')
+		link(rel='stylesheet',href='/components/csshake/csshake.min.css')
 		meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
 	body
 		.container
@@ -24,9 +25,9 @@ html(ng-app="test")
 						a.navbar-brand AWS EC2
 					.collapse.navbar-collapse#navbar-collapse-1
 						ul.nav.navbar-nav
-							li
+							li.shake
 								a(href='#') Hello					
-							li
+							li.shake
 								a(href='#') Amazon
 
 			.row

@@ -17,6 +17,7 @@
     "angular": "~1.2.13",
     "angular-socket-io": "~0.3.0",
     "bootstrap": "~3.1.1",
-    "hide-address-bar": "*"
+    "hide-address-bar": "*",
+    "csshake": "*"
   }
 }
